@@ -1,5 +1,7 @@
 package net.arvid.arja;
 
+import net.arvid.arja.item.ModItemGroups;
+import net.arvid.arja.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -13,6 +15,7 @@ public class Arja implements ModInitializer
 	@Override
 	public void onInitialize()
 	{
-		LOGGER.info("Hello Fabric world!");
+		ModItemGroups.registerItemGroups();
+		ModItems.registerModItems();
 	}
 }
